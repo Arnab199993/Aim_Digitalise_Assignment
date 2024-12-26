@@ -11,8 +11,12 @@ import standDardRoom from "../../Backbone/Assests/room.png";
 import suite from "../../Backbone/Assests/suite.png";
 import pool from "../../Backbone/Assests/swimming.png";
 import hotel from "../../Backbone/Assests/hotel.png";
-
+import { useNavigate } from "react-router-dom";
 const HotelDetails = () => {
+  const navigate = useNavigate();
+  const handleGotoDashBoardPage = () => {
+    navigate("/DashBoard");
+  };
   return (
     <div className="flex justify-center items-center h-[100vh] bg-gradient-to-r from-[#a5b9be] to-[#7d8f97]">
       <Card className="p-4">
@@ -92,8 +96,10 @@ const HotelDetails = () => {
           <footer>
             <CardFooter>
               <div className="flex justify-between">
-                <PrimaryBtn>Sign Up</PrimaryBtn>
-                <PrimaryBtn>Login</PrimaryBtn>
+                <PrimaryBtn onClick={handleGotoDashBoardPage}>
+                  Sign Up
+                </PrimaryBtn>
+                <PrimaryBtn onClick={handleGotoDashBoardPage}>Login</PrimaryBtn>
               </div>
             </CardFooter>
           </footer>
