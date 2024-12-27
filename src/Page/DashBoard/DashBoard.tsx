@@ -21,9 +21,15 @@ const Dashboard = (props: ShowSearchbarProps) => {
             />
           )}
         </div>
-        <div className="flex justify-between my-8 p-8">
-          <DonoughtChart />
-          <GraphChart />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
+          <div className="flex justify-center">
+            <DonoughtChart />
+          </div>
+
+          <div className="flex justify-center">
+            <GraphChart />
+          </div>
         </div>
       </div>
     </div>

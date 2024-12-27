@@ -31,11 +31,11 @@ const HotelDetails = () => {
                 alt="Hotel"
                 className="w-full h-48 object-cover"
               />
-              <div className="absolute top-1 left-12 text-white text-sm font-bold">
+              <div className="absolute top-1 left-1/2 -translate-x-1/2 text-white text-sm font-bold">
                 <p>Your Perfect Stay, Just a Click Away!</p>
               </div>
             </div>
-            <div className="flex items-stretch">
+            <div className="flex ">
               <div className="p-4">
                 <div className="font-bold mb-2">Basic</div>
                 <ul className="list-none text-gray-700">

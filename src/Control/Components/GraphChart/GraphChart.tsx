@@ -7,10 +7,14 @@ import {
   barSpacing,
   chartWidth,
 } from "../GraphChart/Constant";
+
 const GraphChart = () => {
   return (
-    <div>
-      <svg width={chartWidth + 100} height={chartHeight + 100}>
+    <div className="w-full flex justify-center">
+      <svg
+        className="2xl:w-[100%] xl:w-[90%] lg:w-[80%] md:w-[70%] sm:w-[60%] w-[90%]"
+        viewBox={`0 0 ${chartWidth + 100} ${chartHeight + 100}`}
+      >
         {backgroundGridLines.map((_, index) => (
           <line
             key={index}
@@ -52,7 +56,7 @@ const GraphChart = () => {
           strokeWidth="1"
         />
 
-        {Array.from({ length: 11 }).map((_, index) => (
+        {backgroundGridLines.map((_, index) => (
           <text
             key={index}
             x="40"
@@ -70,7 +74,6 @@ const GraphChart = () => {
             key={index}
             x={50 + index * barSpacing + barWidth / 2}
             y={chartHeight + 70}
-            textAnchor="middle"
             fontSize="12"
             className="text-gray-500"
           >
